@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>Mac搭建github Page的Hexo免费个人博客 - FIT_gh</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+    <meta name="description" content="1.基础准备 github账号 安装git 安装node.js、npm（本人使用淘宝镜像）  2.创建repo 需要注意的地方，我都做了标注，如图所示，本人账号zhouxxiaolong，repository name 就必须是zhouxxiaolong.github.io;其他未标注选项默认就好。">
+<meta name="keywords" content="Hexo使用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mac搭建github Page的Hexo免费个人博客">
+<meta property="og:url" content="https://zhouxxiaolong.github.io/2017/04/15/Mac搭建github-Page的Hexo免费个人博客/index.html">
+<meta property="og:site_name" content="FIT_gh">
+<meta property="og:description" content="1.基础准备 github账号 安装git 安装node.js、npm（本人使用淘宝镜像）  2.创建repo 需要注意的地方，我都做了标注，如图所示，本人账号zhouxxiaolong，repository name 就必须是zhouxxiaolong.github.io;其他未标注选项默认就好。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://zhouxxiaolong.github.io/2017/04/15/Mac搭建github-Page的Hexo免费个人博客/2017/04/15/Mac搭建github-Page的Hexo免费个人博客/newRepository.png">
+<meta property="og:image" content="https://zhouxxiaolong.github.io/2017/04/15/Mac搭建github-Page的Hexo免费个人博客/2017/04/15/Mac搭建github-Page的Hexo免费个人博客/url.jpeg">
+<meta property="og:image" content="https://zhouxxiaolong.github.io/2017/04/15/Mac搭建github-Page的Hexo免费个人博客/2017/04/15/Mac搭建github-Page的Hexo免费个人博客/photo.jpeg">
+<meta property="og:image" content="https://zhouxxiaolong.github.io/2017/04/15/Mac搭建github-Page的Hexo免费个人博客/2017/04/15/Mac搭建github-Page的Hexo免费个人博客/forkMe.jpeg">
+<meta property="og:updated_time" content="2017-07-28T14:21:12.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mac搭建github Page的Hexo免费个人博客">
+<meta name="twitter:description" content="1.基础准备 github账号 安装git 安装node.js、npm（本人使用淘宝镜像）  2.创建repo 需要注意的地方，我都做了标注，如图所示，本人账号zhouxxiaolong，repository name 就必须是zhouxxiaolong.github.io;其他未标注选项默认就好。">
+<meta name="twitter:image" content="https://zhouxxiaolong.github.io/2017/04/15/Mac搭建github-Page的Hexo免费个人博客/2017/04/15/Mac搭建github-Page的Hexo免费个人博客/newRepository.png">
+
+
+
+
+
+<link rel="icon" href="/images/avatar.png">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+<script>
+var _hmt = _hmt || [];
+(function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?7814fdee65f5ba1db776c074e2724413";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-3-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/avatar.png" alt="Mac搭建github Page的Hexo免费个人博客" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/">Home</a>
+                
+                <a class="navbar-item" href="/archives">Archives</a>
+                
+                <a class="navbar-item" href="/categories">Categories</a>
+                
+                <a class="navbar-item" href="/tags">Tags</a>
+                
+                <a class="navbar-item" href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                
+                
+                <a class="navbar-item search" title="搜索" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2017-04-15T08:06:43.000Z">2017-04-15</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/工具/">工具</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    12 分钟 读完 (大约 1785 个字)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                Mac搭建github Page的Hexo免费个人博客
+            
+        </h1>
+        <div class="content">
+            <h2 id="1-基础准备"><a href="#1-基础准备" class="headerlink" title="1.基础准备"></a>1.基础准备</h2><ol>
+<li>github账号</li>
+<li>安装git</li>
+<li>安装node.js、npm（本人使用淘宝镜像）</li>
+</ol>
+<h2 id="2-创建repo"><a href="#2-创建repo" class="headerlink" title="2.创建repo"></a>2.创建repo</h2><img src="/2017/04/15/Mac搭建github-Page的Hexo免费个人博客/2017/04/15/Mac搭建github-Page的Hexo免费个人博客/newRepository.png" title="repository地址">
+<p>需要注意的地方，我都做了标注，如图所示，本人账号zhouxxiaolong，repository name 就必须是zhouxxiaolong.github.io;其他未标注选项默认就好。<br><a id="more"></a></p>
+<h2 id="3-配置SSH-key"><a href="#3-配置SSH-key" class="headerlink" title="3.配置SSH key"></a>3.配置SSH key</h2><p>这一步并不重要，配置SSH key与否，并不影响博客的搭建和使用，只是配置了之后，更新博客方便一点，不用每次都输用户名和密码。</p>
+<ul>
+<li>打开终端，输入如下命令</li>
+</ul>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd .ssh</span><br><span class="line">ls -la</span><br></pre></td></tr></table></figure>
+<p>检查终端输出的文件列表中是否已经存在id_rsa.pub 或 id_dsa.pub 文件，如果文件已经存在，那么你可以跳过步骤</p>
+<ul>
+<li>创建SSH key<br><code>$ ssh-keygen -t rsa -C &quot;your_email@example.com&quot;</code><br><strong>注：此处邮箱为注册github账号的邮箱</strong><br>回车，接着会提示你，让你输入文件名，直接回车会创建使用默认文件名的文件（推荐使用默认文件名）；<br>然后会提示你输入两次密码（输入密码之后没有反馈，显示还是空白，但是你确实已经输入了），当然密码也可以不输，直接回车，如果这里没有输入密码，以后提交博客更新的时候就不需要输入密码了。</li>
+<li>添加SSH key到github<br>经过第二步，如果你没有指定文件名（也就是使用的默认文件名），那么你的.ssh文件夹下，应该有一个id_rsa.pub文件了，打开该文件，复制里面的文本。<br>然后登陆github，点击右上角头像右边的三角图标，点击Settings，然后在左边菜单栏点击SSH and GPG keys，点击new ssh key，title 随意填，在key 栏填入你复制的内容，点击add ssh key，就可以添加一个ssh key了。</li>
+<li>验证SSH key是否配置成功<br>终端输入：<br><code>ssh -T git@github.com</code><br>回车，你会看到如下回复，说明你的ssh key添加成功了。<br>Hi zhouxxiaolong! You’ve successfully authenticated, but GitHub does not provide shell access.<br>如果过程中提示你perimission deny相关错误，就在命令前加上sudo 然后执行命令的时候输入你的appleid密码应该就可以了。sudo用来说明用管理员权限运行。</li>
+</ul>
+<h2 id="4-安装Hexo"><a href="#4-安装Hexo" class="headerlink" title="4.安装Hexo"></a>4.安装Hexo</h2><ul>
+<li>终端输入：</li>
+</ul>
+<p><code>npm install -g hexo</code></p>
+<ul>
+<li>初始化，创建所需资源</li>
+</ul>
+<p>新建任意名字文件夹，cd进入该文件夹后，执行如下命令</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<ul>
+<li>生成并发布</li>
+</ul>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g  // 全拼是：hexo generate，可以简写成 hexo g</span><br><span class="line">hexo s  // 全拼是：hexo server，可以简写成 hexo s</span><br></pre></td></tr></table></figure>
+<p>这样就开启了一个本地博客服务器，打开浏览器，在地址栏输入<a href="http://localhost:4000，就可以查看本地博客了，hexo默认生成了一片hello" target="_blank" rel="noopener">http://localhost:4000，就可以查看本地博客了，hexo默认生成了一片hello</a> world博客。<br><strong>注：以上hexo开头的命令，执行目录必须是你创建的博客文件夹目录，因为只有在那个文件夹下才有创建和发布hexo的所有资源。</strong></p>
+<h2 id="5-同步Hexo到Github"><a href="#5-同步Hexo到Github" class="headerlink" title="5.同步Hexo到Github"></a>5.同步Hexo到Github</h2><ul>
+<li>安装</li>
+</ul>
+<p><code>npm install hexo-deployer-git --save</code></p>
+<ul>
+<li>打开本地博客目录的_config.yml文件，编辑其中的deploy节点</li>
+</ul>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line">repository: https://github.com/zhouxxiaolong/zhouxxiaolong.github.io.git</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure>
+<p><strong>注：“: ”后面的空格，这是个坑</strong><br>repository地址从下图中即可获取<br><img src="/2017/04/15/Mac搭建github-Page的Hexo免费个人博客/2017/04/15/Mac搭建github-Page的Hexo免费个人博客/url.jpeg" title="repository地址"><br>保存即可<br>当然可以使用SSH地址作为repository地址，点击右上角Use SSH，之后操作相同。</p>
+<ul>
+<li>生成和发布</li>
+</ul>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean  // clean本地项目，防止缓存</span><br><span class="line">hexo g      // 根据你编辑的md格式的博客，生成静态网页</span><br><span class="line">hexo d      // 将本地博客发布到github</span><br></pre></td></tr></table></figure>
+<p>然后，在浏览器地址栏输入yourusername.github.io就可以访问你的博客了，别人也可以通过这个地址访问你的博客。</p>
+<h2 id="6-Hexo常用命令行"><a href="#6-Hexo常用命令行" class="headerlink" title="6.Hexo常用命令行"></a>6.Hexo常用命令行</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">hexo init       //在指定目录执行该命令，会将当前目录初始化为hexo站点，生成hexo站点所需的一切文件</span><br><span class="line">hexo new “my new blog title”   //新建一篇文章。如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来。</span><br><span class="line">hexo clean      // 清除缓存，如果对本地文件做了修改，同步到远程验证修改的效果之前，先clean，清除缓存</span><br><span class="line">hexo generate   // 可以简写成hexo g 根据markdown文件生成静态文件</span><br><span class="line">hexo server     // 或者简写成hexo s 启动本地hexo 服务器，默认localhost:4000可以访问</span><br><span class="line">hexo deploy     // 或者简写成hexo d 将本地修改，部署到远端</span><br><span class="line">hexo version    // 显示hexo版本</span><br></pre></td></tr></table></figure>
+<h2 id="7-其他常用操作"><a href="#7-其他常用操作" class="headerlink" title="7.其他常用操作"></a>7.其他常用操作</h2><ul>
+<li>新建博文</li>
+</ul>
+<p><code>hexo new &quot;the title of your blog&quot;</code></p>
+<p>建议学习 <a href="https://hexo.io/zh-cn/docs/writing.html" target="_blank" rel="noopener">写作 | Hexo</a></p>
+<ul>
+<li>删除博文<br>删除自动生成的hello world<br>找到/source/_posts文件夹，里面放了所有我们写的博客，想删除哪篇，直接在这里删除，然后再重新发布到github，这篇博文就不见了</li>
+<li>给博文添加tag和分类<br>创建的新博文文件，打开之后顶部会有一段自动生成的文本，在其中加入tag和category标签即可指定tag和分类。</li>
+</ul>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: blog title</span><br><span class="line">date: 2016-07-20 10:59:31</span><br><span class="line">tag: hexo        // 指定本篇文章tag标签</span><br><span class="line">category: hexo   //  指定本片文章分类</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Hexo文章中插入图片 <a href="http://bejond.org/2016/03/23/%E5%A6%82%E4%BD%95%E5%9C%A8Hexo%E6%96%87%E7%AB%A0%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/" target="_blank" rel="noopener">如何在Hexo文章中插入图片 | Bejond IO</a></li>
+</ul>
+<ol>
+<li>编辑_config.yml<br>post_asset_folder: true<br>这样hexo会在每次使用hexo new title命令时在文章源文件目录下创建同名文件夹来存储资源.</li>
+<li>实现<img src="/2017/04/15/Mac搭建github-Page的Hexo免费个人博客/2017/04/15/Mac搭建github-Page的Hexo免费个人博客/photo.jpeg" title="图片资源使用">
+markdown中引用这么写：</li>
+</ol>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_img newRepository.png 创建repository%&#125;</span><br></pre></td></tr></table></figure>
+<p>asset_img 表示要引用图片, newRepository.png是标题, 后面的是图片显示的标题和悬浮时的提示。</p>
+<h2 id="8-安装Theme"><a href="#8-安装Theme" class="headerlink" title="8.安装Theme"></a>8.安装Theme</h2><ol>
+<li><p>终端cd到hexo所在文件夹执行如下命令：<br><code>git clone https://github.com/iissnan/hexo-theme-next themes/next</code></p>
+</li>
+<li><p>将hexo目录下_config.yml里theme的名称landscape修改为next，重新部署就可以了。</p>
+</li>
+<li>fork me on github<br>如果你访问我的个人博客，你会发现右上角有一个倾斜的fork me on github 图标，想要集成这个图标，去这里挑选你喜欢的样式，把样式代码复制过来。<br>本地博客目录下的themes/next/layout/layout.swig文件，然后把你复制过来的样式代码粘贴到如下位置。<img src="/2017/04/15/Mac搭建github-Page的Hexo免费个人博客/2017/04/15/Mac搭建github-Page的Hexo免费个人博客/forkMe.jpeg" title="fork me on github"></li>
+<li>可以选择其他主题<a href="https://hexo.io/themes/" target="_blank" rel="noopener">Themes | Hexo</a>，方法同上。</li>
+</ol>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/Hexo使用/">Hexo使用</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2017/04/23/CustomView重要函数解析/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">CustomView重要函数解析</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/1992/10/30/first/">
+                <span class="level-item">我</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">评论</h3>
+        
+<div id="SOHUCS" sid="2017/04/15/Mac搭建github-Page的Hexo免费个人博客/"></div>
+<script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js"></script>
+<script type="text/javascript">
+window.changyan.api.config({
+    appid: 'cyt6nHTsN',
+    conf: 'prod_e2167ce47089e9b789d53270b7cccc99'
+});
+</script>
+
+    </div>
+</div>
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <div>
+                    <img class="image is-128x128 has-mb-6" src="/images/avatar.png" alt="Fit_gh">
+                    
+                    <p class="is-size-4 is-block">
+                        Fit_gh
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        毕竟生活，毫无挑剔
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>Nanjing</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        文章
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        24
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        分类
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        8
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        标签
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        24
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://github.com/zhouxxiaolong">
+                关注我</a>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/zhouxxiaolong">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        
+    
+        
+
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                分类
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/Android/">
+            <span class="level-start">
+                <span class="level-item">Android</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">6</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Java基础/">
+            <span class="level-start">
+                <span class="level-item">Java基础</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">9</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/ReactNative/">
+            <span class="level-start">
+                <span class="level-item">ReactNative</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/UI设计/">
+            <span class="level-start">
+                <span class="level-item">UI设计</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/前端/">
+            <span class="level-start">
+                <span class="level-item">前端</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/工具/">
+            <span class="level-start">
+                <span class="level-item">工具</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">4</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/我/">
+            <span class="level-start">
+                <span class="level-item">我</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/私服/">
+            <span class="level-start">
+                <span class="level-item">私服</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            标签云
+        </h3>
+        <a href="/tags/Hexo使用/" style="font-size: 10px;">Hexo使用</a> <a href="/tags/UML/" style="font-size: 10px;">UML</a> <a href="/tags/activity/" style="font-size: 13.33px;">activity</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/fragment/" style="font-size: 10px;">fragment</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/iconfont/" style="font-size: 10px;">iconfont</a> <a href="/tags/lambda/" style="font-size: 10px;">lambda</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/nexus私服/" style="font-size: 10px;">nexus私服</a> <a href="/tags/service/" style="font-size: 10px;">service</a> <a href="/tags/socks/" style="font-size: 10px;">socks</a> <a href="/tags/修改ip/" style="font-size: 10px;">修改ip</a> <a href="/tags/微信缓存/" style="font-size: 10px;">微信缓存</a> <a href="/tags/我/" style="font-size: 10px;">我</a> <a href="/tags/批处理/" style="font-size: 13.33px;">批处理</a> <a href="/tags/组件通信/" style="font-size: 10px;">组件通信</a> <a href="/tags/网络/" style="font-size: 10px;">网络</a> <a href="/tags/自动备份/" style="font-size: 10px;">自动备份</a> <a href="/tags/自定义view/" style="font-size: 10px;">自定义view</a> <a href="/tags/设计原则/" style="font-size: 10px;">设计原则</a> <a href="/tags/设计模式/" style="font-size: 16.67px;">设计模式</a> <a href="/tags/面向对象/" style="font-size: 10px;">面向对象</a> <a href="/tags/面试/" style="font-size: 20px;">面试</a>
+    </div>
+</div>
+
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+            
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            最新文章
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/01/21/Activity启动模式/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Activity启动模式">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-21T03:19:28.000Z">2019-01-21</time></div>
+                    <a href="/2019/01/21/Activity启动模式/" class="has-link-black-ter is-size-6">Activity启动模式</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Android/">Android</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2017/11/24/Mac上将socks5代理转为http代理/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Mac上将socks5代理转为http代理">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2017-11-24T00:22:27.000Z">2017-11-24</time></div>
+                    <a href="/2017/11/24/Mac上将socks5代理转为http代理/" class="has-link-black-ter is-size-6">Mac上将socks5代理转为http代理</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/工具/">工具</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2017/11/22/在Android中引入Java8的lambda表达式/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="在Android中引入Java8的lambda表达式（Android Studio3.0之前的实现方式）">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2017-11-22T00:12:11.000Z">2017-11-22</time></div>
+                    <a href="/2017/11/22/在Android中引入Java8的lambda表达式/" class="has-link-black-ter is-size-6">在Android中引入Java8的lambda表达式（Android Studio3.0之前的实现方式）</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Android/">Android</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2017/10/24/解决微信html、css、JavaScript缓存/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="解决微信html、css、JavaScript缓存">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2017-10-24T06:48:38.000Z">2017-10-24</time></div>
+                    <a href="/2017/10/24/解决微信html、css、JavaScript缓存/" class="has-link-black-ter is-size-6">解决微信html、css、JavaScript缓存</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/前端/">前端</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2017/10/18/内外网切换修改ip/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="内外网切换修改ip">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2017-10-18T03:00:22.000Z">2017-10-18</time></div>
+                    <a href="/2017/10/18/内外网切换修改ip/" class="has-link-black-ter is-size-6">内外网切换修改ip</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/工具/">工具</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            归档
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/01/">
+                <span class="level-start">
+                    <span class="level-item">一月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2017/11/">
+                <span class="level-start">
+                    <span class="level-item">十一月 2017</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2017/10/">
+                <span class="level-start">
+                    <span class="level-item">十月 2017</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">6</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2017/09/">
+                <span class="level-start">
+                    <span class="level-item">九月 2017</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">9</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2017/08/">
+                <span class="level-start">
+                    <span class="level-item">八月 2017</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2017/06/">
+                <span class="level-start">
+                    <span class="level-item">六月 2017</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2017/04/">
+                <span class="level-start">
+                    <span class="level-item">四月 2017</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/1992/10/">
+                <span class="level-start">
+                    <span class="level-item">十月 1992</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                标签
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Hexo使用/">
+                        <span class="tag">Hexo使用</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/UML/">
+                        <span class="tag">UML</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/activity/">
+                        <span class="tag">activity</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/docker/">
+                        <span class="tag">docker</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/fragment/">
+                        <span class="tag">fragment</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/http/">
+                        <span class="tag">http</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/iconfont/">
+                        <span class="tag">iconfont</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/lambda/">
+                        <span class="tag">lambda</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/mac/">
+                        <span class="tag">mac</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/nexus私服/">
+                        <span class="tag">nexus私服</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/service/">
+                        <span class="tag">service</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/socks/">
+                        <span class="tag">socks</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/修改ip/">
+                        <span class="tag">修改ip</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/微信缓存/">
+                        <span class="tag">微信缓存</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/我/">
+                        <span class="tag">我</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/批处理/">
+                        <span class="tag">批处理</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/组件通信/">
+                        <span class="tag">组件通信</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/网络/">
+                        <span class="tag">网络</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/自动备份/">
+                        <span class="tag">自动备份</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/自定义view/">
+                        <span class="tag">自定义view</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/设计原则/">
+                        <span class="tag">设计原则</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/设计模式/">
+                        <span class="tag">设计模式</span>
+                        <span class="tag is-grey">8</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/面向对象/">
+                        <span class="tag">面向对象</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/面试/">
+                        <span class="tag">面试</span>
+                        <span class="tag is-grey">13</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+        
+        </div>
+    
+</div>
+
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            最新文章
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/01/21/Activity启动模式/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Activity启动模式">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-21T03:19:28.000Z">2019-01-21</time></div>
+                    <a href="/2019/01/21/Activity启动模式/" class="has-link-black-ter is-size-6">Activity启动模式</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Android/">Android</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2017/11/24/Mac上将socks5代理转为http代理/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Mac上将socks5代理转为http代理">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2017-11-24T00:22:27.000Z">2017-11-24</time></div>
+                    <a href="/2017/11/24/Mac上将socks5代理转为http代理/" class="has-link-black-ter is-size-6">Mac上将socks5代理转为http代理</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/工具/">工具</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2017/11/22/在Android中引入Java8的lambda表达式/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="在Android中引入Java8的lambda表达式（Android Studio3.0之前的实现方式）">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2017-11-22T00:12:11.000Z">2017-11-22</time></div>
+                    <a href="/2017/11/22/在Android中引入Java8的lambda表达式/" class="has-link-black-ter is-size-6">在Android中引入Java8的lambda表达式（Android Studio3.0之前的实现方式）</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Android/">Android</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2017/10/24/解决微信html、css、JavaScript缓存/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="解决微信html、css、JavaScript缓存">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2017-10-24T06:48:38.000Z">2017-10-24</time></div>
+                    <a href="/2017/10/24/解决微信html、css、JavaScript缓存/" class="has-link-black-ter is-size-6">解决微信html、css、JavaScript缓存</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/前端/">前端</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2017/10/18/内外网切换修改ip/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="内外网切换修改ip">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2017-10-18T03:00:22.000Z">2017-10-18</time></div>
+                    <a href="/2017/10/18/内外网切换修改ip/" class="has-link-black-ter is-size-6">内外网切换修改ip</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/工具/">工具</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            归档
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/01/">
+                <span class="level-start">
+                    <span class="level-item">一月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2017/11/">
+                <span class="level-start">
+                    <span class="level-item">十一月 2017</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2017/10/">
+                <span class="level-start">
+                    <span class="level-item">十月 2017</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">6</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2017/09/">
+                <span class="level-start">
+                    <span class="level-item">九月 2017</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">9</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2017/08/">
+                <span class="level-start">
+                    <span class="level-item">八月 2017</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2017/06/">
+                <span class="level-start">
+                    <span class="level-item">六月 2017</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2017/04/">
+                <span class="level-start">
+                    <span class="level-item">四月 2017</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/1992/10/">
+                <span class="level-start">
+                    <span class="level-item">十月 1992</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                标签
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Hexo使用/">
+                        <span class="tag">Hexo使用</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/UML/">
+                        <span class="tag">UML</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/activity/">
+                        <span class="tag">activity</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/docker/">
+                        <span class="tag">docker</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/fragment/">
+                        <span class="tag">fragment</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/http/">
+                        <span class="tag">http</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/iconfont/">
+                        <span class="tag">iconfont</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/lambda/">
+                        <span class="tag">lambda</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/mac/">
+                        <span class="tag">mac</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/nexus私服/">
+                        <span class="tag">nexus私服</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/service/">
+                        <span class="tag">service</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/socks/">
+                        <span class="tag">socks</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/修改ip/">
+                        <span class="tag">修改ip</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/微信缓存/">
+                        <span class="tag">微信缓存</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/我/">
+                        <span class="tag">我</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/批处理/">
+                        <span class="tag">批处理</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/组件通信/">
+                        <span class="tag">组件通信</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/网络/">
+                        <span class="tag">网络</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/自动备份/">
+                        <span class="tag">自动备份</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/自定义view/">
+                        <span class="tag">自定义view</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/设计原则/">
+                        <span class="tag">设计原则</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/设计模式/">
+                        <span class="tag">设计模式</span>
+                        <span class="tag is-grey">8</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/面向对象/">
+                        <span class="tag">面向对象</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/面试/">
+                        <span class="tag">面试</span>
+                        <span class="tag is-grey">13</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/avatar.png" alt="Mac搭建github Page的Hexo免费个人博客" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 FIT_gh&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-icarus">Icarus</a>
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="http://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("zh-CN");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {matchFontHeight: false},
+        SVG: {matchFontHeight: false},
+        CommonHTML: {matchFontHeight: false}
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="回到顶端" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+    <script src="/js/clipboard.js" defer></script>
+    
+
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="想要查找什么...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '文章',
+                PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+                UNTITLED: '(无标题)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>
