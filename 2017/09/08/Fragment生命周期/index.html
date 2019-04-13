@@ -17,7 +17,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://zhouxxiaolong.github.io/2017/09/08/Fragment生命周期/2017/09/08/Fragment生命周期/fragment_lifecycle.png">
 <meta property="og:image" content="https://zhouxxiaolong.github.io/2017/09/08/Fragment生命周期/2017/09/08/Fragment生命周期/FlowchartDiagram.jpg">
-<meta property="og:updated_time" content="2017-09-09T03:01:28.000Z">
+<meta property="og:updated_time" content="2019-04-13T02:10:05.916Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Fragment（片段）">
 <meta name="twitter:description" content="Fragment的个人理解Fragment是Activity模块化的组成部分，Fragment必须嵌套在Activity中，其生命周期直接受宿主 Activity 生命周期的影响。但是，它们具有自己的生命周期。">
@@ -153,7 +153,7 @@ var _hmt = _hmt || [];
                 <span class="level-item has-text-grey">
                     
                     
-                    6 分钟 读完 (大约 847 个字)
+                    6 分钟 读完 (大约 835 个字)
                 </span>
                 
             </div>
@@ -168,8 +168,8 @@ var _hmt = _hmt || [];
             <h2 id="Fragment的个人理解"><a href="#Fragment的个人理解" class="headerlink" title="Fragment的个人理解"></a>Fragment的个人理解</h2><p>Fragment是Activity模块化的组成部分，Fragment必须嵌套在Activity中，其生命周期直接受宿主 Activity 生命周期的影响。<br>但是，它们具有自己的生命周期。</p>
 <a id="more"></a>
 <h2 id="设计原理（官方解释）"><a href="#设计原理（官方解释）" class="headerlink" title="设计原理（官方解释）"></a>设计原理（官方解释）</h2><p>Android 在 Android 3.0（API 级别 11）中引入了片段，主要是为了给大屏幕（如平板电脑）上更加动态和灵活的 UI 设计提供支持。由于平板电脑的屏幕比手机屏幕大得多，因此可用于组合和交换 UI 组件的空间更大。利用片段实现此类设计时，您无需管理对视图层次结构的复杂更改。 通过将 Activity 布局分成片段，您可以在运行时修改 Activity 的外观，并在由 Activity 管理的返回栈中保留这些更改。</p>
-<h2 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h2><img src="/2017/09/08/Fragment生命周期/2017/09/08/Fragment生命周期/fragment_lifecycle.png" title="fragment生命周期">
-<img src="/2017/09/08/Fragment生命周期/2017/09/08/Fragment生命周期/FlowchartDiagram.jpg" title="Fragment与Activity中的关系">
+<h2 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h2><img src="/2017/09/08/Fragment生命周期/2017/09/08/Fragment生命周期/fragment_lifecycle.png">
+<img src="/2017/09/08/Fragment生命周期/2017/09/08/Fragment生命周期/FlowchartDiagram.jpg">
 <h3 id="onAttach"><a href="#onAttach" class="headerlink" title="onAttach()"></a>onAttach()</h3><p>在片段已与 Activity 关联时调用（Activity 传递到此方法内）。</p>
 <h3 id="onCreate"><a href="#onCreate" class="headerlink" title="onCreate()"></a>onCreate()</h3><p>系统会在创建片段时调用此方法。您应该在实现内初始化您想在片段暂停或停止后恢复时保留的必需片段组件。</p>
 <h3 id="onCreateView"><a href="#onCreateView" class="headerlink" title="onCreateView()"></a>onCreateView()</h3><p>系统会在片段首次绘制其用户界面时调用此方法。 要想为您的片段绘制 UI，您从此方法中返回的 View 必须是片段布局的根视图。如果片段未提供 UI，您可以返回 null。</p>
